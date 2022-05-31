@@ -7,9 +7,8 @@ namespace Kats.CodeWars
         public static int OrderDigitsDesc(int num)
         {
             var orderedCharacters = num.ToString().OrderByDescending(c => c);
-            return int.Parse(string.Concat(orderedCharacters).ToString());  
+            return int.Parse(string.Concat(orderedCharacters));  
         }
     }
-
 }
 
