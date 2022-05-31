@@ -1,4 +1,3 @@
-using System.Text;
 using System.Linq;
 
 namespace Kats.CodeWars
@@ -7,8 +6,8 @@ namespace Kats.CodeWars
     {
         public static int OrderDigitsDesc(int num)
         {
-            var orderedCharacters = num.ToString().ToCharArray().OrderByDescending(c => c).ToArray();
-            return int.Parse(new StringBuilder().Append(orderedCharacters).ToString());  
+            var orderedCharacters = num.ToString().OrderByDescending(c => c);
+            return int.Parse(string.Concat(orderedCharacters).ToString());  
         }
     }
 
