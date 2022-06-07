@@ -36,4 +36,17 @@ public class CodeWarsTests
     {
         Validator.ValidatePIN(input).Should().Be(expected);
     }
+
+    [Theory]
+    [InlineData("1234", true)]
+    [InlineData("12345", false)]
+    [InlineData("123456", true)]
+    [InlineData("123a", false)]
+    [InlineData("1234567", false)]
+    [InlineData("123d45", false)]
+    [InlineData("1234 ", false)]
+    public void should_validate_pin_with_regex(string input, bool expected)
+    {
+        Validator.ValidatePINWithRegex(input).Should().Be(expected);
+    }
 }
