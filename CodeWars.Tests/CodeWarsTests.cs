@@ -1,3 +1,4 @@
+using CodeWars.Csharp;
 using FluentAssertions;
 using Kats.CodeWars;
 using Xunit;
@@ -22,5 +23,17 @@ public class CodeWarsTests
     public void should_order_words_by_number(string input, string expected)
     {
         StringSorter.Order(input).Should().Be(expected);
+    }
+
+    [Theory]
+    [InlineData("1234", true)]
+    [InlineData("12345", false)]
+    [InlineData("123456", true)]
+    [InlineData("123a", false)]
+    [InlineData("1234567", false)]
+    [InlineData("123d45", false)]
+    public void should_validate_pin(string input, bool expected)
+    {
+        Validator.ValidatePIN(input).Should().Be(expected);
     }
 }
