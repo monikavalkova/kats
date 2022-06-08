@@ -7,3 +7,5 @@ Function that can take any non-negative integer as an argument and return it wit
 2. Sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result. If the input string is empty, return an empty string.
 
 3. ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits. If valid, return true;
+
+4. Words in a string must be compared - the one with largest score - returned. Each letter scores points depending on their position in the alphabet a = 1, b = 2, c = 3 etc. If two words score the same, return the word that appears earliest in the original string. All letters will be lowercase and all inputs will be valid.

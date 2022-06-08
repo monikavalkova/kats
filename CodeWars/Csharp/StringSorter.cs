@@ -19,5 +19,6 @@ namespace Kats.CodeWars
 
         private static char GetDigit(string s) 
         => s.FirstOrDefault<char>(@char => IsNumber(@char));
+
     }
 }
