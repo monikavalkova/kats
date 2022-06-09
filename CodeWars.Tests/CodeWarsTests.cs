@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CodeWars.Csharp;
+using CodeWars.Csharp.MultiplesOf3And5;
 using FluentAssertions;
 using Kats.CodeWars;
 using Kats.CodeWars.Csharp;
@@ -68,6 +69,13 @@ public class CodeWarsTests
     {
         WordsComparator.GetLargestScoringWord(input).Should().Be(expected);   
         WordsComparator.GetLargestScoringWordFunc(input).Should().Be(expected);    
+    }
+
+    [Theory]
+    [InlineData(10, 23)]
+    public void should_sum_multiples_of_3_and_5(int input, int expected)
+    {
+        MultiplesOf3And5.SumDivisiblesBy3And5(10).Should().Be(expected);
     }
 
     
