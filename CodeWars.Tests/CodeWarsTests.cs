@@ -78,5 +78,18 @@ public class CodeWarsTests
         MultiplesOf3And5.SumDivisiblesBy3And5(10).Should().Be(expected);
     }
 
+    [Theory]
+    [InlineData("xox", false)]
+    [InlineData("", true)]
+    [InlineData("xoox", true)]
+    [InlineData("xoxox", false)]
+    public void should_compare_x_to_o(string input, bool expected)
+    => Izzy.AreXsEqualToOx(input).Should().Be(expected);
     
+    [Theory]
+    [InlineData("time bus3521;#25", "time")]
+    [InlineData("hey $29$*2", "hey")]
+    [InlineData("4dog^%$24&!!", "dog")]
+    public void should_find_longest_word(string input, string expected)
+    => Izzy.FindLongestWord(input).Should().Be(expected);
 }
